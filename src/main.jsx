@@ -16,11 +16,12 @@ import AddCraft from './pages/AddCraft.jsx';
 import MyArtCraft from './pages/MyArtCraft.jsx';
 import UpdateCraft from './pages/UpdateCraft.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import CraftDetails from './pages/CraftDetails.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<App></App>,
+    element: <App></App>,
     children: [
       {
         path: "/",
@@ -29,18 +30,27 @@ const router = createBrowserRouter([
       {
         path: "/artandcraft",
         element: <ArtAndCraft />,
+        loader: () => fetch('http://localhost:4000/artAndCraf/')
       },
       {
         path: "/addcraft",
-        element:<AddCraft/>,
+        element: <AddCraft />,
       },
       {
-        path: "/updatecraft",
-        element: <UpdateCraft/>,
+        path: "/updatecraft/:id",
+        element: <UpdateCraft />,
+        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
       },
+      {
+        path: '/craftDetails/:id',
+        element: <CraftDetails></CraftDetails>,
+        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
+      },
+
       {
         path: "/myartcraft",
-        element: <MyArtCraft/>,
+        element: <MyArtCraft />,
+     
       },
       {
         path: "/register",
@@ -48,7 +58,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login/>,
+        element: <Login />,
+        loader: () => fetch('http://localhost:4000/users')
       },
     ],
   },
@@ -57,12 +68,12 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-    <AuthProvider>
-<RouterProvider router={router} />
-</AuthProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </HelmetProvider>
 
-    
+
 
   </React.StrictMode>,
 )

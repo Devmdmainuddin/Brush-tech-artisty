@@ -1,7 +1,8 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const UpdateCraft = () => {
-
+    const craft =useLoaderData();
 const handleUpdateProduct = (e)=>{
     e.preventDefault();
     const form = e.target;
@@ -16,6 +17,19 @@ const handleUpdateProduct = (e)=>{
     const processingTime = form.processingTime.value;
     const info = { title, price,category, image,rating,description,stockStatus, customization,processingTime };
 
+    fetch(`http://localhost:4000/artAndCraf/${craft._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(info)
+        })
+        .then(res =>res.json())
+        .then(data => {
+            console.log(data)
+        
+            
+        })
 console.log(info)
 
 }
@@ -37,7 +51,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="item_name"
+                            defaultValue={craft.title}
                             id="title"
                             name="title"
                         />
@@ -51,7 +65,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="category"
+                            defaultValue={craft.category}
                             id="category"
                             name="category"
                         />
@@ -67,7 +81,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="Enter description"
+                            defaultValue={craft.description}
                             id="description"
                             name="description"
                         />
@@ -77,7 +91,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="stockStatus"
+                            defaultValue={craft.stockStatus}
                             id="stockStatus"
                             name="stockStatus"
                         />
@@ -90,7 +104,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="Enter Image URL"
+                            defaultValue={craft.image}
                             id="image"
                             name="image"
                         />
@@ -100,7 +114,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="  price"
+                            defaultValue={craft.price}
                             id="price"
                             name="price"
                         />
@@ -115,9 +129,9 @@ console.log(info)
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             maxLength={5}
                             max={5}
-                            min={0}
+                            min={1}
                             type="number"
-                            placeholder="Enter Rating"
+                            defaultValue={craft.rating}
                             id="rating"
                             name="rating"
                         />
@@ -127,7 +141,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="  customization"
+                            defaultValue={craft.customization}
                             id="customization"
                             name="customization"
                         />
@@ -137,7 +151,7 @@ console.log(info)
                         <input
                             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                             type="text"
-                            placeholder="  processingTime"
+                            defaultValue={craft.processingTime}
                             id="processingTime"
                             name="processingTime"
                         />

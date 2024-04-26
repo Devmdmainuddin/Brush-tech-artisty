@@ -71,7 +71,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to='/updatecraft'
+                            to='/updatecraft/'
                             data-tooltip-id="UpdateCraft"
                             data-tooltip-content="Update Craft!"
                             data-tooltip-place="top"

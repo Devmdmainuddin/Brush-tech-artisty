@@ -8,10 +8,6 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { createUser, updateUserProfile, setloader } = useContext(AuthContext)
-
-
-
-
 	const { register, handleSubmit, formState: { errors }, } = useForm();
 
 	const navigate = useNavigate();
@@ -41,7 +37,7 @@ const Register = () => {
 				navigate(from);
 				toast.success('user register successfully')
 				const createdAt = result.user?.metadata?.creationTime;
-				const users = { email, createdAt:createdAt};
+				const users = {fullName,image, email, createdAt:createdAt};
 				fetch('http://localhost:4000/users', {
 					method: 'POST',
 					headers: {
@@ -54,7 +50,8 @@ const Register = () => {
 
 						console.log('inside post', data)
 						if (data.insertedId) {
-							alert('users added successfully')
+						//	alert('users added successfully')
+							toast.success('users added successfully') 
 							// const newproperties = [...properties, data]
 							// setproperties(newproperties)
 							// form.reset();

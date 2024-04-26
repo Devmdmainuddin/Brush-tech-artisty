@@ -18,16 +18,28 @@ const Login = () => {
 	const { signInUser, setloader, googleLogin, githubLogin } = useContext(AuthContext)
 	const from = location?.state || "/";
 
+
 	// handle register
 	const onSubmit = data => {
 		const { email, password } = data;
-
-
 		signInUser(email, password)
 			.then((result) => {
-
-
 				console.log(result.user)
+                const user = {
+                    email,
+                    lastLoggedAt: result.user?.metadata?.lastSignInTime
+                }
+                fetch('http://localhost:4000/user', {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                    })
 
 
 				if (result.user) {
