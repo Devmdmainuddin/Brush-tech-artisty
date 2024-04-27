@@ -66,7 +66,7 @@ console.log(info)
               name="title"
             />
 
-            <label
+            {/* <label
               className="block mt-4 mb-2 dark:text-white"
               htmlFor="category"
             >
@@ -78,7 +78,39 @@ console.log(info)
               placeholder="category"
               id="category"
               name="category"
-            />
+            /> */}
+            <label
+                className="block mt-4 mb-2 dark:text-white"
+                htmlFor="category"
+              >
+                category Name
+              </label>
+              <select
+                name="category"
+                id="category"
+                className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+                type="text"
+                placeholder="Select category"
+              >
+                <option value="Landscape Painting" selected>
+                Landscape Painting
+                </option>
+                <option value="Portrait Drawing" selected>
+                Portrait Drawing
+                </option>
+                <option value="Watercolour Painting" selected>
+                Watercolour Painting
+                </option>
+                <option value="Oil Painting" selected>
+                Oil Painting
+                </option>
+                <option value="Charcoal Sketching" selected>
+                Charcoal Sketching
+                </option>
+                <option value="Cartoon Drawing" selected>
+                Cartoon Drawing
+                </option>
+              </select>
 
 
 

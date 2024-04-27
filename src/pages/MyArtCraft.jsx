@@ -5,14 +5,19 @@ import { Link } from "react-router-dom";
 const MyArtCraft = () => {
 
     const { user } = UseAuth() || {};
+   // const [priceitem,setpriceitem] = useState([]);
     const [item, setItem] = useState([]);
+  //  console.log(priceitem)
     // console.log(user);
     useEffect(() => {
+
         fetch(`http://localhost:4000/myArtAndCraf/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
             });
+
+           
     }, [user]);
 
     const handledelete = _id => {
@@ -29,7 +34,6 @@ const MyArtCraft = () => {
                 }
              
             })
-
     }
 
 

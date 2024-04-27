@@ -15,8 +15,9 @@ import ArtAndCraft from './pages/ArtAndCraft.jsx';
 import AddCraft from './pages/AddCraft.jsx';
 import MyArtCraft from './pages/MyArtCraft.jsx';
 import UpdateCraft from './pages/UpdateCraft.jsx';
-import PrivateRoute from './routes/PrivateRoute.jsx';
+
 import CraftDetails from './pages/CraftDetails.jsx';
+import Categorey from './components/Categorey.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        
       },
       {
         path: "/artandcraft",
         element: <ArtAndCraft />,
         loader: () => fetch('http://localhost:4000/artAndCraf/')
+      },
+      {
+        path: "/artAndCraf/:category",
+        element: <Categorey></Categorey>,
+        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.categorey}`)
+        
+        
       },
       {
         path: "/addcraft",
@@ -42,7 +51,7 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
       },
       {
-        path: '/craftDetails/:id',
+        path: '/CraftDetails/:id',
         element: <CraftDetails></CraftDetails>,
         loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
       },
@@ -52,6 +61,8 @@ const router = createBrowserRouter([
         element: <MyArtCraft />,
      
       },
+    
+      
       {
         path: "/register",
         element: <Register />,
