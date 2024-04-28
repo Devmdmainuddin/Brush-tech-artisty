@@ -44,9 +44,9 @@ const Navbar = () => {
                     title='Luxury Properties'
                     className='inline-flex items-center'
                 >
-
-                    <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 '>
-                        Luxury <span className="text-orange-500">Properties</span>
+                   <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 '>
+                        Brush tech <span className="text-green-500">artisty</span>
+                        {/* <img className="w-[60px]" src="https://i.ibb.co/XbV3yjw/33793b45-1af6-8c12-0931-a67904139ccc.png" alt="" border="0"></img> */}
                     </span>
                 </Link>
                 <ul className='items-center hidden gap-x-6 lg:flex'>

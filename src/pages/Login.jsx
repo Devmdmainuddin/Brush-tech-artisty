@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from "../providers/AuthProvider";
@@ -7,7 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
-
+import Swal from 'sweetalert2'
 const Login = () => {
     const emailRaf = useRef(null)
 	const { register, handleSubmit, formState: { errors } } = useForm();
@@ -24,7 +24,14 @@ const Login = () => {
 		const { email, password } = data;
 		signInUser(email, password)
 			.then((result) => {
-				console.log(result.user)
+                Swal.fire({
+					position: "top-end",
+					icon: "success",
+					title: " add art & craft items ",
+					showConfirmButton: false,
+					timer: 1500
+				});
+			
                 const user = {
                     email,
                     lastLoggedAt: result.user?.metadata?.lastSignInTime
@@ -47,9 +54,17 @@ const Login = () => {
 				}
 			})
 			.catch(error => {
-				setloader(false)
-				toast.error(error.message)
+				
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "email & password don't mach",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+				//toast.error(error.message)
 				console.log('error', error.message)
+                setloader(false)
 			})
 	};
 

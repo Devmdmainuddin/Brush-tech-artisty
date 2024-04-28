@@ -2,6 +2,7 @@ import UseAuth from "../hooks/UseAuth";
 import '../App.css'
 import Swal from 'sweetalert2'
 import { Helmet } from "react-helmet-async";
+import CreateCategorey from "./CreateCategorey";
 const AddCraft = () => {
 
   const { user } = UseAuth() || {}
@@ -251,7 +252,7 @@ const AddCraft = () => {
             </label>
             <input
               className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-              type="text"
+              type="number"
               placeholder="  processingTime"
               id="processingTime"
               name="processingTime"
@@ -275,6 +276,11 @@ const AddCraft = () => {
           value="Add Product"
         /> */}
       </form>
+
+      <div className="flex flex-col items-center">
+       <CreateCategorey></CreateCategorey>
+
+      </div>
 
     </div>
   );
