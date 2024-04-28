@@ -7,28 +7,32 @@ import '../App.css'
 const ArtAndCraft = () => {
     const craft = useLoaderData();
     const [categorey, setcategorey] = useState(craft)
-    const [catitem, setcatitem] = useState([])
-    console.log(catitem)
-    useEffect(() => {
-        let uniqueChars = [...new Set(craft)];
-        setcatitem(uniqueChars)
-        console.log(uniqueChars)
-    }, [craft])
+    // const [catitem, setcatitem] = useState([])
+    // console.log(catitem)
+    // useEffect(() => {
+    //     let uniqueChars = [...new Set(craft.map(p=>p.category))];
+    //     setcatitem(uniqueChars)
+    //     console.log(uniqueChars)
+    // }, [craft])
 
-    const allItems = () => {
-        //   let uniqueChars = [...new Set(craft.categorey === craft)];
-        setcategorey(craft)
-        console.log(craft)
-    }
-    const handlecat = data => {
-        const cat = craft.filter(p => p.category === data)
-        setcategorey(cat)
-    }
-    const handlecatitem = data => {
-        const cat = craft.filter(p => p.category === data)
-        
-    }
+    // const allItems = () => {
+    //     //   let uniqueChars = [...new Set(craft.categorey === craft)];
+    //     setcategorey(craft)
+    //     console.log(craft)
+    // }
+    // const handlecat = data => {
+    //     const cat = craft.filter(p => p.category === data)
+    //     setcategorey(cat)
+    // }
+    // const handlecatitem = data => {
+    //     const cat = craft.filter(p => p.category === data)
+    //     setcatitem(cat)
+    // }
 
+const filteritems=items=>{
+    const cat = craft.filter(p => p.category === items)
+    setcategorey(cat)
+}
 
 
     return (
@@ -38,11 +42,23 @@ const ArtAndCraft = () => {
 
                     <h1 className="text-center text-3xl font-bold">sort  by categorey</h1>
 
-                    <h2 className="mt-4" onClick={allItems}>all</h2>
-                    {catitem.map((p,idx) => <article onClick={() => handlecatitem(this)} key={idx}>{p.category}</article>)}
-                    {craft.map((brand) => (
+                    <div className="flex gap-y-8 flex-col">
+                    <button className="" type="button" onClick={()=>setcategorey(craft)}>all</button>
+                    <button type="button" onClick={()=>filteritems("Landscape Painting")}>Landscape Painting</button>
+                    <button type="button" onClick={()=>filteritems("Portrait Drawing")}>Portrait Drawing</button>
+                    <button type="button" onClick={()=>filteritems("Watercolour Painting")}>Watercolour Painting</button>
+                    <button type="button" onClick={()=>filteritems("Oil Painting")}>Oil Painting</button>
+                    <button type="button" onClick={()=>filteritems("Charcoal Sketching")}>Charcoal Sketching</button>
+                    <button type="button" onClick={()=>filteritems("Cartoon Drawing")}>Cartoon Drawing</button>
+                    </div>
+                    
+
+                  
+                    {/* {catitem.map((p,idx) => <article onClick={() => handlecatitem(this)} key={idx}>{p.category}</article>)}
+                     */}
+                    {/* {craft.map((brand) => (
                         <article onClick={() => handlecat(brand.category)} key={brand._id}>{brand.category} {brand.length} </article>
-                    ))}
+                    ))} */}
                 </div>
             </div>
             <div className=" rounded-lg bg-gray-200 lg:col-span-2 py-6 sm:py-12  text-gray-800">
