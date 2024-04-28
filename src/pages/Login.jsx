@@ -64,7 +64,7 @@ const Login = () => {
     return (
         <div className="w-full mt-8 mx-auto max-w-[800px] p-8 space-y-3 rounded-xl bg-gray-50 text-gray-100">
             <Helmet>
-				<title>Luxury Properties | login </title>
+				<title>Brush Tech Artisty | login </title>
 			</Helmet>
             <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Welcome Back</h3>
 

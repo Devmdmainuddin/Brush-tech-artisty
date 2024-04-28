@@ -1,5 +1,6 @@
 import {  useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 // import { Fade, Slide, } from "react-awesome-reveal";
 // import { data } from "autoprefixer";
 import '../App.css'
@@ -37,6 +38,9 @@ const filteritems=items=>{
 
     return (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+            <Helmet>
+				<title>Brush Tech Artisty | ArtAndCraft </title>
+			</Helmet>
             <div className=" rounded-lg bg-gray-200">
                 <div className="  mt-10 w-full ">
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import UseAuth from "../hooks/UseAuth";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 const MyArtCraft = () => {
 
     const { user } = UseAuth() || {};
@@ -57,6 +58,9 @@ const MyArtCraft = () => {
 
     return (
         <div>
+            <Helmet>
+				<title>Brush Tech Artisty | MyArtCraft </title>
+			</Helmet>
             <section className="container px-4 mx-auto">
                 <div className="flex items-center gap-x-3">
                     <h2 className="text-lg font-medium text-gray-800 dark:text-white">my Art & Craft</h2>

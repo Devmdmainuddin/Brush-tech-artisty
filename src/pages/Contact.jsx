@@ -1,8 +1,11 @@
-
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
         <section className="bg-white dark:bg-gray-900">
+            <Helmet>
+				<title>Brush Tech Artisty | contact </title>
+			</Helmet>
     <div className="container px-6 py-12 mx-auto">
         <div className="lg:flex lg:items-center lg:-mx-6">
             <div className="lg:w-1/2 lg:mx-6">

@@ -1,21 +1,25 @@
 import Banner from "../components/Banner";
+import BrandCard from "../components/BrandCard";
 import CraftItems from "../components/CraftItems";
 import Newsletter from "../components/Newsletter";
 import Testimonials from "../components/Testimonials";
-
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+				<title>Brush Tech Artisty | Home </title>
+			</Helmet>
             <Banner></Banner>
            
-
+{/* 
         <div className="pb-16">
             <div className="flex justify-center items-center">
                 <div className="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
                     <div className="flex flex-col jusitfy-center items-center space-y-10">
                         <div className="flex flex-col justify-center items-center space-y-2">
-                            <p className="text-xl leading-5 text-gray-600">2021 Trendsetters</p>
+                            <p className="text-xl leading-5 text-gray-600">2024 Trendsetters</p>
                             <h1 className="text-3xl xl:text-4xl font-semibold leading-7 xl:leading-9 text-gray-800">Shop By Category</h1>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
@@ -57,8 +61,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
+<BrandCard></BrandCard>
            
             <CraftItems></CraftItems>
             <Testimonials></Testimonials>

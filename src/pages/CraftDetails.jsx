@@ -1,13 +1,16 @@
 import { useLoaderData } from "react-router-dom";
 import { FaCaravan } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const CraftDetails = () => {
     const craft = useLoaderData();
 console.log(craft)
     return (
         <div>
-           
+           <Helmet>
+				<title>Brush Tech Artisty | CraftDetails </title>
+			</Helmet>
             
              <h2>{craft.title}</h2>
 
@@ -67,7 +70,7 @@ console.log(craft)
                     </summary>
                     <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
                         from time to time. To stay up-to-date on the latest deals and special offers, you can sign
-                        up for the company's newsletter or follow it on social media.
+                        up for the company{`'`}s newsletter or follow it on social media.
                     </p>
                 </details>
             </div>
@@ -103,7 +106,7 @@ console.log(craft)
                     </summary>
                     <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
                         from time to time. To stay up-to-date on the latest deals and special offers, you can sign
-                        up for the company's newsletter or follow it on social media.
+                        up for the company{`'`}s newsletter or follow it on social media.
                     </p>
                 </details>
             </div>

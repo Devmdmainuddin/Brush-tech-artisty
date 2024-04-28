@@ -1,6 +1,7 @@
 import UseAuth from "../hooks/UseAuth";
 import '../App.css'
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 const AddCraft = () => {
 
   const { user } = UseAuth() || {}
@@ -50,6 +51,9 @@ const AddCraft = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto">
+      <Helmet>
+				<title>Brush Tech Artisty | addCraft </title>
+			</Helmet>
       <div className="flex flex-col items-center">
         <h2 className="text-3xl font-bold">add art & craft </h2>
         <div className="horizontalLine mt-6">
@@ -183,16 +187,65 @@ const AddCraft = () => {
               id="rating"
               name="rating"
             />
-            <label className="block mb-2 mt-4 dark:text-white" htmlFor="customization">
+
+<label
+              className="block mt-4 mb-2 dark:text-white"
+              htmlFor="customization"
+            >
               customization
             </label>
+            <select
+              name="customization"
+              id="customization"
+              className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+              type="text"
+              placeholder="Select customization"
+            >
+              <option value="yes" selected>
+                yes
+              </option>
+              <option value="no" selected>
+                no
+              </option>
+              
+            </select>
+            {/* <label className="block mb-2 mt-4 dark:text-white" htmlFor="customization">
+              customization
+            </label>
+           <div className="flex items-center gap-x-4 justify-center">
+           <div className="flex items-center gap-x-4 justify-center">
+           <input
+              className=" p-2 border rounded-md focus:outline-[#FF497C]"
+              type="radio"
+              placeholder="  customization"
+              id="customization"
+              name="customization"
+            />
+            <label className="block" htmlFor="customization">
+              yes
+            </label>
+           </div>
+            <div className="flex items-center gap-x-4 justify-center">
             <input
+              className="p-2 border rounded-md focus:outline-[#FF497C]"
+              type="radio"
+              placeholder="  customization"
+              id="customization"
+              name="customization"
+            />
+            <label className="block" htmlFor="customization">
+              no
+            </label>
+            </div>
+           </div> */}
+
+            {/* <input
               className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
               type="text"
               placeholder="  customization"
               id="customization"
               name="customization"
-            />
+            /> */}
             <label className="block mb-2 mt-4 dark:text-white" htmlFor="processingTime">
               processingTime
             </label>

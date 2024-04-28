@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 
 const UpdateCraft = () => {
     const craft =useLoaderData();
@@ -38,6 +38,9 @@ console.log(info)
 
     return (
         <div className="max-w-[1200px] mx-auto">
+            <Helmet>
+				<title>Brush Tech Artisty | UpdateCart </title>
+			</Helmet>
             <div className="space-y-2 ">
                 <h2 className="text-3xl font-bold">Partem reprimique an pro</h2>
                 <p className="font-serif text-sm text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
