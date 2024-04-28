@@ -1,12 +1,14 @@
 import Banner from "../components/Banner";
 import CraftItems from "../components/CraftItems";
+import Newsletter from "../components/Newsletter";
+import Testimonials from "../components/Testimonials";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div>
+           
 
         <div className="pb-16">
             <div className="flex justify-center items-center">
@@ -57,8 +59,10 @@ const Home = () => {
             </div>
         </div>
 
-            </div>
+           
             <CraftItems></CraftItems>
+            <Testimonials></Testimonials>
+            <Newsletter></Newsletter>
         </div>
     );
 };

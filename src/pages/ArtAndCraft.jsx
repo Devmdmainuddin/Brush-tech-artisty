@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 // import { Fade, Slide, } from "react-awesome-reveal";
 // import { data } from "autoprefixer";

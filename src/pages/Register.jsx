@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-    const { createUser, updateUserProfile, setloader } = useContext(AuthContext)
+	const { createUser, updateUserProfile, setloader } = useContext(AuthContext)
 	const { register, handleSubmit, formState: { errors }, } = useForm();
 
 	const navigate = useNavigate();
@@ -30,14 +30,14 @@ const Register = () => {
 		}
 
 		createUser(email, password)
-		
-		.then(result => {
-			console.log('user created succesfully !' , result.user)
-			updateUserProfile(fullName, image)
+
+			.then(result => {
+				console.log('user created succesfully !', result.user)
+				updateUserProfile(fullName, image)
 				navigate(from);
 				toast.success('user register successfully')
 				const createdAt = result.user?.metadata?.creationTime;
-				const users = {fullName,image, email, createdAt:createdAt};
+				const users = { fullName, image, email, createdAt: createdAt };
 				fetch('http://localhost:4000/users', {
 					method: 'POST',
 					headers: {
@@ -50,8 +50,8 @@ const Register = () => {
 
 						console.log('inside post', data)
 						if (data.insertedId) {
-						//	alert('users added successfully')
-							toast.success('users added successfully') 
+							//	alert('users added successfully')
+							toast.success('users added successfully')
 							// const newproperties = [...properties, data]
 							// setproperties(newproperties)
 							// form.reset();
@@ -72,8 +72,8 @@ const Register = () => {
 
 
 	};
-    return (
-        <div className="flex mt-8 flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 text-gray-800 mx-auto">
+	return (
+		<div className="flex mt-8 flex-col max-w-[800px] p-6 rounded-md sm:p-10 bg-gray-50 text-gray-800 mx-auto">
 			<Helmet>
 				<title>Luxury Properties | Register </title>
 			</Helmet>
@@ -81,6 +81,9 @@ const Register = () => {
 				<h1 className="my-3 text-4xl font-bold">Sign up</h1>
 				<p className="text-sm text-gray-600">Sign in to access your account</p>
 			</div>
+
+
+
 			<form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
 				<div className="space-y-4">
 					<div>
@@ -123,16 +126,21 @@ const Register = () => {
 				</div>
 				<div className="space-y-2">
 					<div>
-						<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Sign up</button>
+						<button type="submit" className="w-full px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">Sign up</button>
 					</div>
-					<p className="px-6 text-sm text-center text-gray-600">Don{`'`}t have an account yet?
+					<div className="flex items-center justify-center py-4 text-center bg-gray-50 dark:bg-gray-700">
+					<span className="text-sm text-gray-600 dark:text-gray-200">alreday  have an account? </span>
+
+					<Link to='/login'><a href="#" className="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline">login</a></Link>	
+				</div>
+					{/* <p className="px-6 text-sm text-center text-gray-600">Don{`'`}t have an account yet?
 						<Link to='/login' rel="noopener noreferrer" href="#" className="hover:underline dark:text-violet-600">Sign in</Link>.
-					</p>
+					</p> */}
 				</div>
 			</form>
 			<ToastContainer />
 		</div>
-    );
+	);
 };
 
 export default Register;

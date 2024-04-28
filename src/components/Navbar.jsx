@@ -110,12 +110,12 @@ const Navbar = () => {
 
                     <li>
                         <NavLink
-                            to='/login'
-                            aria-label='login'
-                            title='login'
+                            to='/contact'
+                            aria-label='contact'
+                            title='contact'
                             className={({ isActive }) => (isActive ? 'active' : 'default')}
                         >
-                            login & register
+                            contact
                         </NavLink>
                     </li>
                    

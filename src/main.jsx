@@ -18,6 +18,7 @@ import UpdateCraft from './pages/UpdateCraft.jsx';
 
 import CraftDetails from './pages/CraftDetails.jsx';
 import Categorey from './components/Categorey.jsx';
+import Contact from './pages/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
       {
         path: "/myartcraft",
         element: <MyArtCraft />,
+     
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
      
       },
     
