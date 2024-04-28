@@ -10,7 +10,7 @@ const CraftItems = () => {
         .then((res) => res.json())
         .then((data) => {
             setitems(data);
-      console.log(data)
+    //   console.log(data)
         });
     },[])
     return (

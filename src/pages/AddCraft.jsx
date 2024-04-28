@@ -1,9 +1,9 @@
- import UseAuth from "../hooks/UseAuth";
+import UseAuth from "../hooks/UseAuth";
 import '../App.css'
-
+import Swal from 'sweetalert2'
 const AddCraft = () => {
 
-   const { user } = UseAuth() || {}
+  const { user } = UseAuth() || {}
   const handleAddProduct = (e) => {
     e.preventDefault();
 
@@ -12,17 +12,17 @@ const AddCraft = () => {
     const image = form.image.value;
     const price = form.price.value;
     const category = form.category.value;
-    const description =form.description.value;
+    const description = form.description.value;
     const stockStatus = form.stockStatus.value;
     const rating = form.rating.value;
     const customization = form.customization.value;
     const processingTime = form.processingTime.value;
     const name = user.displayName;
-     const email = user.email;
+    const email = user.email;
 
     // console.log(name, price, image, type)
 
-    const info = {name,email, title, price,category, image,rating,description,stockStatus, customization,processingTime };
+    const info = { name, email, title, price, category, image, rating, description, stockStatus, customization, processingTime };
 
     fetch("http://localhost:4000/addArtAndCraf", {
       method: "POST",
@@ -34,10 +34,16 @@ const AddCraft = () => {
         console.log('inside post', data)
         if (data?.insertedId) {
           form.reset();
-          alert("bhai data insert hoice")
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: " add art & craft items ",
+            showConfirmButton: false,
+            timer: 1500
+          });
         }
       })
-console.log(info)
+    console.log(info)
   };
 
 
@@ -48,7 +54,7 @@ console.log(info)
         <h2 className="text-3xl font-bold">add art & craft </h2>
         <div className="horizontalLine mt-6">
         </div>
-        
+
       </div>
 
 
@@ -80,37 +86,37 @@ console.log(info)
               name="category"
             /> */}
             <label
-                className="block mt-4 mb-2 dark:text-white"
-                htmlFor="category"
-              >
-                category Name
-              </label>
-              <select
-                name="category"
-                id="category"
-                className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                type="text"
-                placeholder="Select category"
-              >
-                <option value="Landscape Painting" selected>
+              className="block mt-4 mb-2 dark:text-white"
+              htmlFor="category"
+            >
+              category Name
+            </label>
+            <select
+              name="category"
+              id="category"
+              className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+              type="text"
+              placeholder="Select category"
+            >
+              <option value="Landscape Painting" selected>
                 Landscape Painting
-                </option>
-                <option value="Portrait Drawing" selected>
+              </option>
+              <option value="Portrait Drawing" selected>
                 Portrait Drawing
-                </option>
-                <option value="Watercolour Painting" selected>
+              </option>
+              <option value="Watercolour Painting" selected>
                 Watercolour Painting
-                </option>
-                <option value="Oil Painting" selected>
+              </option>
+              <option value="Oil Painting" selected>
                 Oil Painting
-                </option>
-                <option value="Charcoal Sketching" selected>
+              </option>
+              <option value="Charcoal Sketching" selected>
                 Charcoal Sketching
-                </option>
-                <option value="Cartoon Drawing" selected>
+              </option>
+              <option value="Cartoon Drawing" selected>
                 Cartoon Drawing
-                </option>
-              </select>
+              </option>
+            </select>
 
 
 
@@ -199,12 +205,22 @@ console.log(info)
             />
           </div>
         </div>
-
+        {/* <a
+          className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+          href="#"
+        >
+          Download
+        </a> */}
         <input
-          className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
+          className="inline-block w-full rounded bg-indigo-600 mt-4 px-4 py-3 text-sm font-medium text-white transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
           type="submit"
           value="Add Product"
         />
+        {/* <input
+          className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
+          type="submit"
+          value="Add Product"
+        /> */}
       </form>
 
     </div>
