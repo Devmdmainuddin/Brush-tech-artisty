@@ -92,7 +92,7 @@ const Home = () => {
             <div className=" grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 lg:5  xl:grid-cols-6 gap-5  mt-10 w-full ">
                 {catitems.map(items =>
                     <div key={items._id} >
-                        <Link to=''><div className=" w-full group  cursor-pointer ">
+                        <Link to={`/artAndCraf/${items.title}`}><div className=" w-full group  cursor-pointer ">
                             <div className="cardShadow p-5 w-full bg-white dark:bg-[#1a2641d5] rounded">
                                 <img
                                     className="w-full h-[120px] object-contain rounded-md"

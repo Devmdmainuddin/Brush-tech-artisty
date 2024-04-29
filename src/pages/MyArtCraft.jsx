@@ -13,7 +13,8 @@ const MyArtCraft = () => {
     const handlesort = () => {
     
         setItem(TopPropertie)
-  
+        
+        setTopPropertie(item)
         
       
     }
@@ -85,7 +86,7 @@ const MyArtCraft = () => {
 
                 <div className='text-center'>
                 <details className="dropdown ">
-                    <summary onClick={handlesort} className="m-1 btn">sort by </summary>
+                    <summary onClick={()=>handlesort(this)} className="m-1 btn">sort by </summary>
                     
                 </details>
             </div>
