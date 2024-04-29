@@ -84,7 +84,7 @@ const filteritems=items=>{
                                             <span>price : {crafts.price}</span>
                                             <span>{crafts.processingTime} day</span>
                                         </div>
-                                        <Link to={`/CraftDetails/${crafts._id}`}><button>details</button></Link>
+                                        <Link to={`/CraftDetails/${crafts._id}`}><button className="px-4 w-full py-2 mt-4 rounded hover:bg-[#2988e8]  bg-[#528ef0] duration-200 text-white cursor-pointer font-semibold">details</button></Link>
                                     </div>
 
                                 </article>)

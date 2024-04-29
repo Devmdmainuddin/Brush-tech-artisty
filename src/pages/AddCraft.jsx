@@ -53,8 +53,8 @@ const AddCraft = () => {
   return (
     <div className="max-w-[1200px] mx-auto">
       <Helmet>
-				<title>Brush Tech Artisty | addCraft </title>
-			</Helmet>
+        <title>Brush Tech Artisty | addCraft </title>
+      </Helmet>
       <div className="flex flex-col items-center">
         <h2 className="text-3xl font-bold">add art & craft </h2>
         <div className="horizontalLine mt-6">
@@ -138,16 +138,36 @@ const AddCraft = () => {
               id="description"
               name="description"
             />
+
+        <label className="block mt-4 mb-2 dark:text-white"htmlFor="stockStatus">
+        stockStatus
+          </label>
+            <select
+              name="stockStatus"
+              id="stockStatus"
+              className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+              type="text"
+              placeholder="stockStatus"
+            >
+              <option value="In stock" selected>
+              In stock
+              </option>
+              <option value="Made to Order" selected>
+              Made to Order
+              </option>
+
+            </select>
+{/* 
             <label className="block mb-2 mt-4 dark:text-white" htmlFor="stockStatus">
               stockStatus
-            </label>
-            <input
+            </label> */}
+            {/* <input
               className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
               type="text"
               placeholder="stockStatus"
               id="stockStatus"
               name="stockStatus"
-            />
+            /> */}
           </div>
 
           <div className="flex-1">
@@ -189,7 +209,7 @@ const AddCraft = () => {
               name="rating"
             />
 
-<label
+            <label
               className="block mt-4 mb-2 dark:text-white"
               htmlFor="customization"
             >
@@ -208,7 +228,7 @@ const AddCraft = () => {
               <option value="no" selected>
                 no
               </option>
-              
+
             </select>
             {/* <label className="block mb-2 mt-4 dark:text-white" htmlFor="customization">
               customization
@@ -278,7 +298,7 @@ const AddCraft = () => {
       </form>
 
       <div className="flex flex-col items-center">
-       <CreateCategorey></CreateCategorey>
+        <CreateCategorey></CreateCategorey>
 
       </div>
 

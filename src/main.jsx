@@ -12,7 +12,7 @@ import ArtAndCraft from './pages/ArtAndCraft.jsx';
 import AddCraft from './pages/AddCraft.jsx';
 import MyArtCraft from './pages/MyArtCraft.jsx';
 import UpdateCraft from './pages/UpdateCraft.jsx';
-
+import PrivateRoute from './routes/PrivateRoute.jsx'
 import CraftDetails from './pages/CraftDetails.jsx';
 import Categorey from './components/Categorey.jsx';
 import Contact from './pages/Contact.jsx';
@@ -41,22 +41,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/addcraft",
-        element: <AddCraft />,
+        element:<PrivateRoute><AddCraft /></PrivateRoute> ,
       },
       {
         path: "/updatecraft/:id",
-        element: <UpdateCraft />,
+        element:<PrivateRoute><UpdateCraft /></PrivateRoute> ,
         loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.id}`)
       },
       {
         path: '/CraftDetails/:id',
-        element: <CraftDetails></CraftDetails>,
+        element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.id}`)
       },
 
       {
         path: "/myartcraft",
-        element: <MyArtCraft />,
+        element: <PrivateRoute><MyArtCraft /></PrivateRoute>,
      
       },
       {

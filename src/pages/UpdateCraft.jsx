@@ -41,11 +41,11 @@ console.log(info)
             <Helmet>
 				<title>Brush Tech Artisty | UpdateCart </title>
 			</Helmet>
-            <div className="space-y-2 ">
-                <h2 className="text-3xl font-bold">Partem reprimique an pro</h2>
-                <p className="font-serif text-sm text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
+            <div className="space-y-2 text-center">
+                <h2 className="text-3xl font-bold">UpdateCart</h2>
+               
             </div>
-            <form onSubmit={handleUpdateProduct} >
+            <form onSubmit={handleUpdateProduct}className="my-6" >
                 <div className="flex gap-8 flex-col md:flex-row">
                     <div className="flex-1 items-start">
                         <label className="block mb-2 dark:text-white" htmlFor="title">
@@ -162,9 +162,9 @@ console.log(info)
                 </div>
 
                 <input
-                    className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
+                    className="px-4 w-full py-2 mt-4 rounded hover:bg-[#2988e8]  bg-[#528ef0] duration-200 text-white cursor-pointer font-semibold"
                     type="submit"
-                    value="Add Product"
+                    value="update Product"
                 />
             </form>
         </div>
