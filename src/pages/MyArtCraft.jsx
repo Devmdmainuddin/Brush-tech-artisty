@@ -7,6 +7,18 @@ const MyArtCraft = () => {
 
     const { user } = UseAuth() || {};
     const [item, setItem] = useState([]);
+    
+   const [TopPropertie,setTopPropertie]=useState([]);
+
+    const handlesort = () => {
+    
+        setItem(TopPropertie)
+  
+        
+      
+    }
+
+
 
     useEffect(() => {
 
@@ -14,6 +26,9 @@ const MyArtCraft = () => {
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
+                const topProperties = [...data].sort((a, b) => b.price - a.price)
+                setTopPropertie(topProperties)
+               
             });
 
 
@@ -67,6 +82,14 @@ const MyArtCraft = () => {
 
                 <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">total cart : {item.length}</span>
                 </div>
+
+                <div className='text-center'>
+                <details className="dropdown ">
+                    <summary onClick={handlesort} className="m-1 btn">sort by </summary>
+                    
+                </details>
+            </div>
+
 
                 <div className="flex flex-col mt-6">
                     <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
