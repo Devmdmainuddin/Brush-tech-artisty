@@ -1,1 +1,1 @@
- export const baseURL = 'http://localhost:4000';
+ export const baseURL = 'https://brush-tech-artisty-server.vercel.app';

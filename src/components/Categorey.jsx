@@ -7,7 +7,7 @@ const Categorey = () => {
   console.log(item.length)
 
 //    useEffect(() => {
-//       fetch(`http://localhost:4000/artAndCraf/${item.Categorey}`)
+//       fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${item.Categorey}`)
 //           .then((res) => res.json())
 //           .then((data) => {
 //             setItem(data);

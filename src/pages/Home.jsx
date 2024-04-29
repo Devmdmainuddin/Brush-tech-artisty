@@ -13,7 +13,7 @@ const Home = () => {
   
     const [catitems, setcatitems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/categorey')
+        fetch('https://brush-tech-artisty-server.vercel.app/categorey')
             .then((res) => res.json())
             .then((data) => {
                 setcatitems(data);

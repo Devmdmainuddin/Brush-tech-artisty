@@ -36,7 +36,7 @@ const Login = () => {
                     email,
                     lastLoggedAt: result.user?.metadata?.lastSignInTime
                 }
-                fetch('http://localhost:4000/user', {
+                fetch('https://brush-tech-artisty-server.vercel.app/user', {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'

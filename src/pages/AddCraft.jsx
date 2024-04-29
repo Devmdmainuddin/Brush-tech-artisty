@@ -26,7 +26,7 @@ const AddCraft = () => {
 
     const info = { name, email, title, price, category, image, rating, description, stockStatus, customization, processingTime };
 
-    fetch("http://localhost:4000/addArtAndCraf", {
+    fetch("https://brush-tech-artisty-server.vercel.app/addArtAndCraf", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info)

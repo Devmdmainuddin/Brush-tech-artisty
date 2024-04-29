@@ -21,7 +21,7 @@ const Banner = () => {
 
         <Slider {...settings}>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/Y8nvCsk/8.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative max-h-[400px] bg-[url(https://i.ibb.co/Y8nvCsk/8.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -47,7 +47,7 @@ const Banner = () => {
                 </section>
             </div>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/nMGKqWx/7.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative max-h-[400px] bg-[url(https://i.ibb.co/nMGKqWx/7.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -73,7 +73,7 @@ const Banner = () => {
                 </section>
             </div>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/1m3W3Pj/6.jpg)] bg-cover bg-center bg-no-repeat">
+                <section  className="relative max-h-[400px] bg-[url(https://i.ibb.co/1m3W3Pj/6.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -99,7 +99,7 @@ const Banner = () => {
                 </section>
             </div>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/1bhH9fb/5.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative max-h-[400px] bg-[url(https://i.ibb.co/1bhH9fb/5.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -126,7 +126,7 @@ const Banner = () => {
                 </section>
             </div>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/xFMgdTV/12.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative max-h-[400px] bg-[url(https://i.ibb.co/xFMgdTV/12.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -153,7 +153,7 @@ const Banner = () => {
                 </section>
             </div>
             <div>
-                <section className="relative bg-[url(https://i.ibb.co/VBys9Kb/13.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative max-h-[400px] bg-[url(https://i.ibb.co/VBys9Kb/13.jpg)] bg-cover bg-center bg-no-repeat">
                     <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">

@@ -17,7 +17,7 @@ const handleUpdateProduct = (e)=>{
     const processingTime = form.processingTime.value;
     const info = { title, price,category, image,rating,description,stockStatus, customization,processingTime };
 
-    fetch(`http://localhost:4000/artAndCraf/${craft._id}`, {
+    fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${craft._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

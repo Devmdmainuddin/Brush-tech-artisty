@@ -10,7 +10,7 @@ const MyArtCraft = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:4000/myArtAndCraf/${user?.email}`)
+        fetch(`https://brush-tech-artisty-server.vercel.app/myArtAndCraf/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
@@ -30,7 +30,7 @@ const MyArtCraft = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/artAndCraf/${_id}`, {
+                fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

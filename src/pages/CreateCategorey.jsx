@@ -15,7 +15,7 @@ const CreateCategorey = () => {
     
         // console.log(name, price, image, type)
         const info = { name, email, title,  image, };
-        fetch("http://localhost:4000/addCategorey", {
+        fetch("https://brush-tech-artisty-server.vercel.app/addCategorey", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info)

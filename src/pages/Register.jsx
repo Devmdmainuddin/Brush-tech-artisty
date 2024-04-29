@@ -72,7 +72,7 @@ const Register = () => {
 				//toast.success('user register successfully')
 				const createdAt = result.user?.metadata?.creationTime;
 				const users = { fullName, image, email, createdAt: createdAt };
-				fetch('http://localhost:4000/users', {
+				fetch('https://brush-tech-artisty-server.vercel.app/users', {
 					method: 'POST',
 					headers: {
 						'content-type': 'application/json'

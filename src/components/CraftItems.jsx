@@ -8,7 +8,7 @@ const CraftItems = () => {
     const [dataLength,setDataLength]=useState(6);
     const [items,setitems]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:4000/artAndCraf`)
+        fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf`)
         .then((res) => res.json())
         .then((data) => {
             setitems(data);

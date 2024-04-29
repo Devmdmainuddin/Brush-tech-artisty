@@ -30,12 +30,12 @@ const router = createBrowserRouter([
       {
         path: "/artandcraft",
         element: <ArtAndCraft />,
-        loader: () => fetch('http://localhost:4000/artAndCraf/')
+        loader: () => fetch('https://brush-tech-artisty-server.vercel.app/artAndCraf/')
       },
       {
         path: "/artAndCraf/:category",
         element: <Categorey></Categorey>,
-        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.categorey}`)
+        loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.categorey}`)
         
         
       },
@@ -46,12 +46,12 @@ const router = createBrowserRouter([
       {
         path: "/updatecraft/:id",
         element: <UpdateCraft />,
-        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
+        loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.id}`)
       },
       {
         path: '/CraftDetails/:id',
         element: <CraftDetails></CraftDetails>,
-        loader: ({ params }) => fetch(`http://localhost:4000/artAndCraf/${params.id}`)
+        loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.id}`)
       },
 
       {
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
-        loader: () => fetch('http://localhost:4000/users')
+        loader: () => fetch('https://brush-tech-artisty-server.vercel.app/users')
       },
     ],
   },
