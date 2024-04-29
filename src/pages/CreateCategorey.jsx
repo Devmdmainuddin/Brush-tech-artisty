@@ -15,7 +15,7 @@ const CreateCategorey = () => {
     
         // console.log(name, price, image, type)
         const info = { name, email, title,  image, };
-        fetch("http://localhost:4000/addArtAndCraf", {
+        fetch("http://localhost:4000/addCategorey", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info)

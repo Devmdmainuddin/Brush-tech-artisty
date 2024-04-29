@@ -10,11 +10,7 @@ const ArtAndCraft = () => {
     const [categorey, setcategorey] = useState(craft)
     // const [catitem, setcatitem] = useState([])
     // console.log(catitem)
-    // useEffect(() => {
-    //     let uniqueChars = [...new Set(craft.map(p=>p.category))];
-    //     setcatitem(uniqueChars)
-    //     console.log(uniqueChars)
-    // }, [craft])
+   
 
     // const allItems = () => {
     //     //   let uniqueChars = [...new Set(craft.categorey === craft)];

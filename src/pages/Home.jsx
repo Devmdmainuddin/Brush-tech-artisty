@@ -1,19 +1,31 @@
+import { useEffect } from "react";
 import Banner from "../components/Banner";
 import BrandCard from "../components/BrandCard";
 import CraftItems from "../components/CraftItems";
 import Newsletter from "../components/Newsletter";
 import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 
 const Home = () => {
+
+    const [catitems, setcatitems] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:4000/categorey')
+            .then((res) => res.json())
+            .then((data) => {
+                setcatitems(data);
+                console.log(data)
+            });
+    }, [])
     return (
         <div>
             <Helmet>
-				<title>Brush Tech Artisty | Home </title>
-			</Helmet>
+                <title>Brush Tech Artisty | Home </title>
+            </Helmet>
             <Banner></Banner>
-           
-{/* 
+
+            {/* 
         <div className="pb-16">
             <div className="flex justify-center items-center">
                 <div className="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
@@ -63,8 +75,39 @@ const Home = () => {
             </div>
         </div> */}
 
-<BrandCard></BrandCard>
-           
+
+            <div className="text-center md:text-left mt-16">
+                <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
+                    
+                    Top Brands
+                </p>
+                <p className="text-[32px] lg:text-[40px] font-semibold dark:text-white">
+                    Browse By Brands
+                </p>
+            </div>
+
+            {/* grid grid-cols-5 gap-4  dark:bg-[#0F172A] */}
+            <div className=" grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 lg:5  xl:grid-cols-6 gap-5  mt-10 w-full ">
+                {catitems.map(items =>
+                    <div key={items._id} >
+                        <div className=" w-full group  cursor-pointer ">
+                            <div className="cardShadow p-5 w-full bg-white dark:bg-[#1a2641d5] rounded">
+                                <img
+                                    className="w-full h-[120px] object-contain rounded-md"
+                                    src={items.image}
+                                    alt=""
+                                />
+                                <div className=" w-full text-slate-800  rounded h-10 mt-2  flex justify-center items-center">
+                                    <p className="text-center font-bold">{items.title}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+
+                }
+            </div>
+
             <CraftItems></CraftItems>
             <Testimonials></Testimonials>
             <Newsletter></Newsletter>
