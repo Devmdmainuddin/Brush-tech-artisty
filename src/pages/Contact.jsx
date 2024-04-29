@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white dark:bg-gray-900 max-w-[1200px] mx-auto">
             <Helmet>
 				<title>Brush Tech Artisty | contact </title>
 			</Helmet>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -14,7 +15,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-4 max-w-xs text-gray-500">
-        Arts and crafts describes a wide variety of activities involving making things with one's own hands. Arts and crafts is usually a hobby. Some crafts (art skills) have been practised since preshistoric times, others are more recent inventions.
+        Arts and crafts describes a wide variety of activities involving making things with one{`'`}s own hands. Arts and crafts is usually a hobby. Some crafts (art skills) have been practised since preshistoric times, others are more recent inventions.
         </p>
 
         <ul className="mt-8 flex gap-6">
@@ -119,23 +120,23 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+              <a href="#" className="text-gray-700 transition hover:opacity-75"> Charcoal Sketching </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Company Review </a>
+              <a href="#" className="text-gray-700 transition hover:opacity-75"> Cartoon Drawing </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+              <a href="#" className="text-gray-700 transition hover:opacity-75"> Oil Paintings </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
+              <a href="#" className="text-gray-700 transition hover:opacity-75"> Watercolor Paintings </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> SEO Optimisation </a>
+              <a href="#" className="text-gray-700 transition hover:opacity-75"> Portrait Drawings </a>
             </li>
           </ul>
         </div>
@@ -163,7 +164,7 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Contact </a>
+              <Link to='/contact' href="#" className="text-gray-700 transition hover:opacity-75"> Contact </Link>
             </li>
 
             <li>
@@ -200,7 +201,10 @@ const Footer = () => {
       </div>
     </div>
 
-    <p className="text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+    <p className="text-center text-xs text-gray-500">&copy; 2024. <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 '>
+                        Brush tech <span className="text-green-500">artisty</span>
+                        {/* <img className="w-[60px]" src="https://i.ibb.co/XbV3yjw/33793b45-1af6-8c12-0931-a67904139ccc.png" alt="" border="0"></img> */}
+                    </span> All rights reserved.</p>
   </div>
 </footer>
     );

@@ -57,7 +57,7 @@ const MyArtCraft = () => {
 
 
     return (
-        <div>
+        <div className="max-w-[1200px] mx-auto">
             <Helmet>
 				<title>Brush Tech Artisty | MyArtCraft </title>
 			</Helmet>
@@ -65,7 +65,7 @@ const MyArtCraft = () => {
                 <div className="flex items-center gap-x-3">
                     <h2 className="text-lg font-medium text-gray-800 dark:text-white">my Art & Craft</h2>
 
-                    <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400"></span>
+                <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">total cart : {item.length}</span>
                 </div>
 
                 <div className="flex flex-col mt-6">

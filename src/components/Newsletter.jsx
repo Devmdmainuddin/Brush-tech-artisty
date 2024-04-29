@@ -3,7 +3,7 @@
 const Newsletter = () => {
    
     return (
-        <div className="2xl:mx-auto 2xl:container mx-4 py-16">
+        <div className="max-w-[1200px] mx-auto mx-4 py-16">
             <div className=" w-full  relative flex items-center justify-center">
                 <img src="https://i.ibb.co/Dpdwj5m/10.jpg" alt="dining" className="w-full h-full absolute z-0 hidden xl:block" />
                 <img src="https://i.ibb.co/WxDXDhJ/11.jpg" alt="dining" className="w-full h-full absolute z-0 hidden sm:block xl:hidden" />

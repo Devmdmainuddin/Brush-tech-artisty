@@ -1,6 +1,6 @@
 
 
-const BrandCard = ({}) => {
+const BrandCard = () => {
 
     return (
         <div >

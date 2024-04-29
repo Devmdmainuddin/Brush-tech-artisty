@@ -40,7 +40,7 @@ const Testimonials = () => {
   
     return (
         <>
-            <div>
+            <div className="max-w-[1200] mx-auto">
                 <h2 className="text-2xl leading-6 text-gray-800 text-center px-4">Testimonials</h2>
                 <h1 className="lg:text-5xl md:text-4xl text-2xl font-semibold px-4 leading-10 text-gray-800 mt-6 text-center">What our client says</h1>
                 <div className="container mx-auto  xl:px-20 px-10 py-20 gap-6">

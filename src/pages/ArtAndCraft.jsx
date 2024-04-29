@@ -8,23 +8,7 @@ import '../App.css'
 const ArtAndCraft = () => {
     const craft = useLoaderData();
     const [categorey, setcategorey] = useState(craft)
-    // const [catitem, setcatitem] = useState([])
-    // console.log(catitem)
    
-
-    // const allItems = () => {
-    //     //   let uniqueChars = [...new Set(craft.categorey === craft)];
-    //     setcategorey(craft)
-    //     console.log(craft)
-    // }
-    // const handlecat = data => {
-    //     const cat = craft.filter(p => p.category === data)
-    //     setcategorey(cat)
-    // }
-    // const handlecatitem = data => {
-    //     const cat = craft.filter(p => p.category === data)
-    //     setcatitem(cat)
-    // }
 
 const filteritems=items=>{
     const cat = craft.filter(p => p.category === items)
@@ -33,7 +17,7 @@ const filteritems=items=>{
 
 
     return (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
             <Helmet>
 				<title>Brush Tech Artisty | ArtAndCraft </title>
 			</Helmet>

@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import Banner from "../components/Banner";
-import BrandCard from "../components/BrandCard";
+
+
 import CraftItems from "../components/CraftItems";
 import Newsletter from "../components/Newsletter";
 import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-
+  
     const [catitems, setcatitems] = useState([])
     useEffect(() => {
         fetch('http://localhost:4000/categorey')
@@ -75,8 +77,8 @@ const Home = () => {
             </div>
         </div> */}
 
-
-            <div className="text-center md:text-left mt-16">
+<div className="max-w-[1200px] mx-auto">
+<div className=" text-center md:text-left mt-16">
                 <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
                     
                     Top Brands
@@ -90,7 +92,7 @@ const Home = () => {
             <div className=" grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 lg:5  xl:grid-cols-6 gap-5  mt-10 w-full ">
                 {catitems.map(items =>
                     <div key={items._id} >
-                        <div className=" w-full group  cursor-pointer ">
+                        <Link to=''><div className=" w-full group  cursor-pointer ">
                             <div className="cardShadow p-5 w-full bg-white dark:bg-[#1a2641d5] rounded">
                                 <img
                                     className="w-full h-[120px] object-contain rounded-md"
@@ -101,12 +103,15 @@ const Home = () => {
                                     <p className="text-center font-bold">{items.title}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div></Link>
+                        
                     </div>
                 )
 
                 }
             </div>
+</div>
+            
 
             <CraftItems></CraftItems>
             <Testimonials></Testimonials>

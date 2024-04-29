@@ -21,10 +21,10 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='max-w-[1200px'>
         <Navbar></Navbar>
       </div>
-      <div>
+      <div className='max-w-[1200px'>
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
