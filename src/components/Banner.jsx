@@ -26,14 +26,13 @@ const Banner = () => {
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Let us find your
+                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Forest Landscape Paintings
 
-                                <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
+                                <strong className="block font-extrabold text-rose-700"> Paintings. </strong>
                             </h1>
 
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                                numquam ea!
+                            A tranquil forest scene painting depicting a peaceful woodland with tall trees, a meandering stream, and gentle sunlight filtering through the canopy.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
@@ -53,21 +52,17 @@ const Banner = () => {
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Let us find your
+                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Portrait Drawings
 
-                                <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
+                                <strong className="block font-extrabold text-rose-700">Drawings </strong>
                             </h1>
 
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                                numquam ea!
+                            A lifelike graphite portrait drawing capturing the essence of a young woman, with meticulous attention to detail and shading.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
-                                <a href="#"
-                                    className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-                                    Get Started
-                                </a>
+                                
 
                                 <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">
                                     Learn More
@@ -83,25 +78,21 @@ const Banner = () => {
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Let us find your
+                            <h1 className="text-3xl font-extrabold sm:text-5xl"> lifelike graphite portrait drawing capturing
 
-                                <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
+                                <strong className="block font-extrabold text-rose-700"> capturing</strong>
                             </h1>
 
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                                numquam ea!
+                            A lifelike graphite portrait drawing capturing the essence of a young woman, with meticulous attention to detail and shading.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
                                 <a href="#"
                                     className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-                                    Get Started
+                                     Learn More
                                 </a>
 
-                                <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">
-                                    Learn More
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -113,25 +104,22 @@ const Banner = () => {
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Let us find your
+                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Watercolor Paintings
 
-                                <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
+                                <strong className="block font-extrabold text-rose-700"> capturing the beauty </strong>
                             </h1>
 
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                                numquam ea!
+                            A serene landscape watercolor painting capturing the beauty of a tranquil countryside scene, with rolling hills, a winding river, and fluffy clouds in the sky.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
                                 <a href="#"
                                     className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-                                    Get Started
+                                   Learn More
                                 </a>
 
-                                <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">
-                                    Learn More
-                                </a>
+                              
                             </div>
                         </div>
                     </div>
@@ -143,25 +131,22 @@ const Banner = () => {
 
                     <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl"> Let us find your
+                            <h1 className="text-3xl font-extrabold sm:text-5xl"> majestic landscape oil painting
 
                                 <strong className="block font-extrabold text-rose-700"> Forever Home. </strong>
                             </h1>
 
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                                numquam ea!
+                            A majestic landscape oil painting featuring a snow-capped mountain range against a dramatic sunset sky, with warm hues of orange and pink blending into deep blue.
                             </p>
 
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
                                 <a href="#"
                                     className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-                                    Get Started
+                                   Learn More
                                 </a>
 
-                                <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">
-                                    Learn More
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
