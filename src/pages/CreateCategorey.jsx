@@ -1,4 +1,5 @@
 import UseAuth from "../hooks/UseAuth";
+import Swal from 'sweetalert2'
 
 
 const CreateCategorey = () => {
@@ -14,6 +15,25 @@ const CreateCategorey = () => {
     
         // console.log(name, price, image, type)
         const info = { name, email, title,  image, };
+        fetch("http://localhost:4000/addArtAndCraf", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(info)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log('inside post', data)
+        if (data?.insertedId) {
+          form.reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: " add art & craft items ",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      })
         console.log(info)
     }    
     return (
@@ -22,8 +42,6 @@ const CreateCategorey = () => {
 
 
                 <h3 className="mt-3 text-xl font-medium text-center text-gray-600 dark:text-gray-200">CreateCategorey</h3>
-
-
 
                 <form onSubmit={handleCategorey}>
                     <div className="w-full mt-4">
