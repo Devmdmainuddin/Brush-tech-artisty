@@ -16,11 +16,12 @@ import PrivateRoute from './routes/PrivateRoute.jsx'
 import CraftDetails from './pages/CraftDetails.jsx';
 import Categorey from './components/Categorey.jsx';
 import Contact from './pages/Contact.jsx';
-
+import ErrorPage from './ErrorPage/ErrorPage.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/artAndCraf/:category",
         element: <Categorey></Categorey>,
-        loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.categorey}`)
+        loader: ({ params }) => fetch(`https://brush-tech-artisty-server.vercel.app/artAndCraf/${params.category}`)
         
         
       },

@@ -1,14 +1,27 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 // import { Fade, Slide, } from "react-awesome-reveal";
 // import { data } from "autoprefixer";
 import '../App.css'
 
+
+
 const ArtAndCraft = () => {
     const craft = useLoaderData();
     const [categorey, setcategorey] = useState(craft)
-   
+    const [catitems, setcatitems] = useState([])
+
+    useEffect(() => {
+        fetch('https://brush-tech-artisty-server.vercel.app/categorey')
+            .then((res) => res.json())
+            .then((data) => {
+                setcatitems(data);
+                console.log(data)
+            });
+    }, [])
+
+
 
 const filteritems=items=>{
     const cat = craft.filter(p => p.category === items)
@@ -25,16 +38,16 @@ const filteritems=items=>{
                 <div className="  mt-10 w-full ">
 
                     <h1 className="text-center text-3xl font-bold">sort  by categorey</h1>
-
-                    <div className="flex gap-y-8 flex-col mt-6">
-                    <button className="" type="button" onClick={()=>setcategorey(craft)}>all</button>
+                   
+                    {/* <div className="flex gap-y-8 flex-col mt-6">
+                   
                     <button type="button" onClick={()=>filteritems("Landscape Painting")}>Landscape Painting</button>
                     <button type="button" onClick={()=>filteritems("Portrait Drawing")}>Portrait Drawing</button>
                     <button type="button" onClick={()=>filteritems("Watercolour Painting")}>Watercolour Painting</button>
                     <button type="button" onClick={()=>filteritems("Oil Painting")}>Oil Painting</button>
                     <button type="button" onClick={()=>filteritems("Charcoal Sketching")}>Charcoal Sketching</button>
                     <button type="button" onClick={()=>filteritems("Cartoon Drawing")}>Cartoon Drawing</button>
-                    </div>
+                    </div> */}
                     
 
                   
@@ -43,6 +56,29 @@ const filteritems=items=>{
                     {/* {craft.map((brand) => (
                         <article onClick={() => handlecat(brand.category)} key={brand._id}>{brand.category} {brand.length} </article>
                     ))} */}
+
+<div className=" flex flex-col  mt-10 w-full ">
+<button className="" type="button" onClick={()=>setcategorey(craft)}>all</button>
+               
+                {catitems.map(items =>
+                    <div key={items._id} onClick={()=>filteritems(items.title)} >
+                        <Link ><div className=" w-full group  cursor-pointer ">
+                            <div className="cardShadow p-5 w-full  rounded">
+                                
+                                <div className=" w-full text-slate-800  rounded  mt-2  flex justify-center items-center">
+                                    <p className="text-center font-bold">{items.title}</p>
+                                </div>
+                            </div>
+                        </div></Link>
+                        
+                    </div>
+                )
+
+                }
+            </div>
+
+
+
                 </div>
             </div>
             <div className=" rounded-lg bg-gray-200 lg:col-span-2 py-6 sm:py-12  text-gray-800">
@@ -62,7 +98,7 @@ const filteritems=items=>{
                     <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
                         {
                             categorey.map(crafts =>
-                                <article key={crafts._id} className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+                                <article  key={crafts._id} className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
                                     <img
                                         alt=""
                                         src={crafts.image}

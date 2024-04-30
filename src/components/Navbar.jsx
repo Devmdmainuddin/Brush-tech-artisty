@@ -153,7 +153,7 @@ const Navbar = () => {
                             : <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="">
                                     <div className="w-10 ">
-                                        <p>profile</p>
+                                        <p >profile</p>
 
                                     </div>
                                 </label>
@@ -188,13 +188,13 @@ const Navbar = () => {
                                     <div>
                                         <Link
                                             to='/'
-                                            aria-label='Luxury Properties'
-                                            title='Luxury Properties'
-                                            className='inline-flex items-center'
+                                            aria-label='Brush tech artisty'
+                                            title='Brush tech artisty'
+                                            className='Brush tech artisty'
                                         >
 
                                             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                                                Luxury <span>Properties</span>
+                                            Brush tech  <span>artisty</span>
                                             </span>
                                         </Link>
                                     </div>
@@ -211,34 +211,81 @@ const Navbar = () => {
                                 </div>
                                 <nav>
                                     <ul className='space-y-4'>
-                                        <li>
-                                            <Link
-                                                to='/contact'
-                                                aria-label='contact'
-                                                title='contact'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                                            >
-                                                contact us
-                                            </Link>
-                                        </li>
+                                    <li>
+                        <NavLink
+                            to='/'
+                            data-tooltip-id="Home"
+                            data-tooltip-content="Home!"
+                            data-tooltip-place="top"
 
-                                        <li>
-                                            <Link
-                                                to='/about'
-                                                aria-label='About Us'
-                                                title='About Us'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                                            >
-                                                About Us
-                                            </Link>
-                                        </li>
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        ><Tooltip id="Home" />
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to='/ArtandCraft'
+                            data-tooltip-id="ArtandCraft"
+                            data-tooltip-content="Art & Craft!"
+                            data-tooltip-place="top"
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        ><Tooltip id="ArtandCraft" />
+                            art & craft
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink
+                            to='/addCraft'
+                            data-tooltip-id="addCraft"
+                            data-tooltip-content="add Craft!"
+                            data-tooltip-place="top"
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        ><Tooltip id="addCraft" />
+                            addCraft
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to='/updatecraft/'
+                            data-tooltip-id="UpdateCraft"
+                            data-tooltip-content="Update Craft!"
+                            data-tooltip-place="top"
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        ><Tooltip id="addCraft" />
+                            UpdateCraft
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to='/myartcraft'
+                            data-tooltip-id="addCrmyartcraftaft"
+                            data-tooltip-content="my art & craft"
+                            data-tooltip-place="top"
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        ><Tooltip id="addCrmyartcraftaft" />
+                            my Art & Craft
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink
+                            to='/contact'
+                            aria-label='contact'
+                            title='contact'
+                            className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        >
+                            contact
+                        </NavLink>
+                    </li>
                                     </ul>
 
                                     <div className="dropdown dropdown-end">
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                             <div className="w-10 rounded-full">
                                                 <img aria-label='About Us'
-                                                    title={`${user.displayName}`} className="z-[1111]" src={user?.photoURL || "https://i.ibb.co/y0yrnYQ/1681283571946.jpg"} />
+                                                    title={`${user?.displayName}`} className="z-[1111]" src={user?.photoURL || "https://i.ibb.co/n3pxCKM/profile.png"} />
                                             </div>
                                         </label>
                                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1111] p-2 shadow bg-base-100 rounded-box w-52">

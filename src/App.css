@@ -1,5 +1,7 @@
 
-
+.active{
+    @apply text-cyan-700
+  }
 
 .horizontalLine{
     width: 300px;

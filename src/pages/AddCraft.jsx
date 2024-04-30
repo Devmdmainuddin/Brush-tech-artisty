@@ -3,9 +3,20 @@ import '../App.css'
 import Swal from 'sweetalert2'
 import { Helmet } from "react-helmet-async";
 import CreateCategorey from "./CreateCategorey";
+import { useEffect, useState } from "react";
 const AddCraft = () => {
-
+  const [catitems, setcatitems] = useState([])
   const { user } = UseAuth() || {}
+
+  useEffect(() => {
+    fetch('https://brush-tech-artisty-server.vercel.app/categorey')
+        .then((res) => res.json())
+        .then((data) => {
+            setcatitems(data);
+          
+        });
+}, [])
+
   const handleAddProduct = (e) => {
     e.preventDefault();
 
@@ -45,7 +56,13 @@ const AddCraft = () => {
           });
         }
       })
-    console.log(info)
+   
+
+   
+
+   
+
+
   };
 
 
@@ -103,10 +120,11 @@ const AddCraft = () => {
               type="text"
               placeholder="Select category"
             >
-              <option value="Landscape Painting" selected>
-                Landscape Painting
-              </option>
-              <option value="Portrait Drawing" selected>
+              {catitems.map(cat=><option key={cat._id} value={`${cat.title}`} selected>
+              {cat.title}
+              </option>)}
+              
+              {/* <option value="Portrait Drawing" selected>
                 Portrait Drawing
               </option>
               <option value="Watercolour Painting" selected>
@@ -120,7 +138,7 @@ const AddCraft = () => {
               </option>
               <option value="Cartoon Drawing" selected>
                 Cartoon Drawing
-              </option>
+              </option> */}
             </select>
 
 
