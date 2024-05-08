@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 // import { Fade, Slide, } from "react-awesome-reveal";
@@ -23,22 +23,22 @@ const ArtAndCraft = () => {
 
 
 
-const filteritems=items=>{
-    const cat = craft.filter(p => p.category === items)
-    setcategorey(cat)
-}
+    const filteritems = items => {
+        const cat = craft.filter(p => p.category === items)
+        setcategorey(cat)
+    }
 
 
     return (
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
             <Helmet>
-				<title>Brush Tech Artisty | ArtAndCraft </title>
-			</Helmet>
+                <title>Brush Tech Artisty | ArtAndCraft </title>
+            </Helmet>
             <div className=" rounded-lg bg-gray-200">
                 <div className="  mt-10 w-full ">
 
                     <h1 className="text-center text-3xl font-bold">sort  by categorey</h1>
-                   
+
                     {/* <div className="flex gap-y-8 flex-col mt-6">
                    
                     <button type="button" onClick={()=>filteritems("Landscape Painting")}>Landscape Painting</button>
@@ -48,34 +48,34 @@ const filteritems=items=>{
                     <button type="button" onClick={()=>filteritems("Charcoal Sketching")}>Charcoal Sketching</button>
                     <button type="button" onClick={()=>filteritems("Cartoon Drawing")}>Cartoon Drawing</button>
                     </div> */}
-                    
 
-                  
+
+
                     {/* {catitem.map((p,idx) => <article onClick={() => handlecatitem(this)} key={idx}>{p.category}</article>)}
                      */}
                     {/* {craft.map((brand) => (
                         <article onClick={() => handlecat(brand.category)} key={brand._id}>{brand.category} {brand.length} </article>
                     ))} */}
 
-<div className=" flex flex-col  mt-10 w-full ">
-<button className="" type="button" onClick={()=>setcategorey(craft)}>all</button>
-               
-                {catitems.map(items =>
-                    <div key={items._id} onClick={()=>filteritems(items.title)} >
-                        <Link ><div className=" w-full group  cursor-pointer ">
-                            <div className="cardShadow p-5 w-full  rounded">
-                                
-                                <div className=" w-full text-slate-800  rounded  mt-2  flex justify-center items-center">
-                                    <p className="text-center font-bold">{items.title}</p>
-                                </div>
-                            </div>
-                        </div></Link>
-                        
-                    </div>
-                )
+                    <div className=" flex flex-col  mt-10 w-full ">
+                        <button className="" type="button" onClick={() => setcategorey(craft)}>all</button>
 
-                }
-            </div>
+                        {catitems.map(items =>
+                            <div key={items._id} onClick={() => filteritems(items.title)} >
+                                <Link ><div className=" w-full group  cursor-pointer ">
+                                    <div className="cardShadow p-5 w-full  rounded">
+
+                                        <div className=" w-full text-slate-800  rounded  mt-2  flex justify-center items-center">
+                                            <p className="text-center font-bold">{items.title}</p>
+                                        </div>
+                                    </div>
+                                </div></Link>
+
+                            </div>
+                        )
+
+                        }
+                    </div>
 
 
 
@@ -98,7 +98,7 @@ const filteritems=items=>{
                     <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
                         {
                             categorey.map(crafts =>
-                                <article  key={crafts._id} className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+                                <article key={crafts._id} className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
                                     <img
                                         alt=""
                                         src={crafts.image}
@@ -114,7 +114,7 @@ const filteritems=items=>{
                                         </a>
 
                                         <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                                        {crafts.description}
+                                            {crafts.description}
                                         </p>
                                         <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-gray-400">
                                             <span>price : {crafts.price}</span>

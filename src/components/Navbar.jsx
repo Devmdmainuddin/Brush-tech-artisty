@@ -85,7 +85,7 @@ const Navbar = () => {
                             addCraft
                         </NavLink>
                     </li>
-                    <li>
+                    {user && <li>
                         <NavLink
                             to='/updatecraft/'
                             data-tooltip-id="UpdateCraft"
@@ -95,7 +95,7 @@ const Navbar = () => {
                         ><Tooltip id="addCraft" />
                             UpdateCraft
                         </NavLink>
-                    </li>
+                    </li> }
                     <li>
                         <NavLink
                             to='/myartcraft'
@@ -246,7 +246,7 @@ const Navbar = () => {
                             addCraft
                         </NavLink>
                     </li>
-                    <li>
+                    {user && <li>
                         <NavLink
                             to='/updatecraft/'
                             data-tooltip-id="UpdateCraft"
@@ -256,7 +256,8 @@ const Navbar = () => {
                         ><Tooltip id="addCraft" />
                             UpdateCraft
                         </NavLink>
-                    </li>
+                    </li> }
+                    
                     <li>
                         <NavLink
                             to='/myartcraft'
